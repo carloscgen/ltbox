@@ -4,6 +4,13 @@ import './styles.scss';
 
 export const Title = () => {
   return (
-    <Typography className='title'>LITEFLIX</Typography>
+    <Typography 
+    sx={{
+      fontWeight: 700,
+      fontSize: '34px',
+      lineHeight: '34px',
+      letterSpacing: '4px'
+    }}
+    className='title'>LITE<span>FLIX</span></Typography>
   )
 }
