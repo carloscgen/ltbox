@@ -1,40 +1,77 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material'
+import { Box, FormControl, ListSubheader, MenuItem, Select, Typography } from '@mui/material';
+import './styles.scss';
+import arrow from '../../../../assets/arrow.png'
 
 export const PopularSelect = () => {
-  return (
-    <Box>
-        <Typography>
-            {'VER: '}
-        </Typography>
-        {/* <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel htmlFor="grouped-native-select">Grouping</InputLabel>
-        <Select native defaultValue="" id="grouped-native-select" label="Grouping">
-          <option aria-label="None" value="" />
-          <optgroup label="Category 1">
-            <option value={1}>Option 1</option>
-            <option value={2}>Option 2</option>
-          </optgroup>
-          <optgroup label="Category 2">
-            <option value={3}>Option 3</option>
-            <option value={4}>Option 4</option>
-          </optgroup>
-        </Select>
-      </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel htmlFor="grouped-select">Grouping</InputLabel>
-        <Select defaultValue="" id="grouped-select" label="Grouping">
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <ListSubheader>Category 1</ListSubheader>
-          <MenuItem value={1}>Option 1</MenuItem>
-          <MenuItem value={2}>Option 2</MenuItem>
-          <ListSubheader>Category 2</ListSubheader>
-          <MenuItem value={3}>Option 3</MenuItem>
-          <MenuItem value={4}>Option 4</MenuItem>
-        </Select>
-      </FormControl> */}
-    </Box>
-  )
+    return (
+        <Box
+            sx={{
+                display: 'flex',
+                alignItems: 'center',
+            }}
+        >
+            <Typography
+                sx={{
+                    color: '#fff',
+                    fontWeight: 400,
+                    fontSize: '18px',
+                    lineHeight: '18px',
+                    textAlign: 'center',
+                    letterSpacing: '4px',
+                }}
+            >
+                {'VER: '}
+            </Typography>
+            <FormControl sx={{ m: 1, width: { xs: '375px', sm: '375px', md: '241px', lg: '241px', xl: '241px' } }}>
+                <Select
+                    value={''}
+                    onChange={() => { }}
+                    displayEmpty
+                    inputProps={{ 'aria-label': 'Without label' }}
+                >
+                    <MenuItem
+                        sx={{
+                            fontWeight: 700,
+                            fontSize: '18px',
+                            lineHeight: '18px',
+                            textAlign: 'center',
+                            letterSpacing: '4px',
+                            width: { xs: '2375px', sm: '2375px', md: '241px', xl: '241px', lg: '241px' },
+                        }}
+                        value="">
+                        <em style={{ fontStyle: 'normal', letterSpacing: '4px', marginRight: '11px' }}>Populares</em>
+                        <img src={arrow} alt={'Icon button'}></img>
+                    </MenuItem>
+                    <ListSubheader
+                        sx={{
+                            fontWeight: 400,
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            paddingTop: '16px',
+                            letterSpacing: '4px',
+                        }}
+                    >Category 1</ListSubheader>
+                    <ListSubheader
+                        sx={{
+                            fontWeight: 400,
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            paddingTop: '16px',
+                            letterSpacing: '4px',
+                        }}
+                    >Category 1</ListSubheader>
+                    <ListSubheader
+                        sx={{
+                            fontWeight: 400,
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            paddingTop: '16px',
+                            letterSpacing: '4px',
+                        }}
+                    >Category 1</ListSubheader>
+                </Select>
+            </FormControl>
+        </Box>
+    )
 }

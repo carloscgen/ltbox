@@ -9,7 +9,8 @@ export const MainMovie = () => {
         <Box
             sx={{
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                pt: 'calc(100vh - 477px)'
             }}
         >
             <MainTitle />
