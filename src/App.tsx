@@ -6,6 +6,7 @@ import { Navigation } from './components/navigation';
 import { MainMovie } from './components/mainMovie';
 import { PopularMovies } from './components/popularMovies/popularButton';
 
+//
 // BASE URL
 // https://image.tmdb.org/t/p/w1280
 
